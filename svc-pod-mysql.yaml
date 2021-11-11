@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: svc-mysql-pod
+spec:
+  selector:
+    app: mysql-pod
+  type: ClusterIP
+  ports:
+    - port: 3306
+      targetPort: 3306

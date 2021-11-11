@@ -7,6 +7,9 @@ metadata:
 spec:
   containers: 
     - name: mysql-pod
-      image: mysql:stable
+      image: mysql:latest
+      env:
+      - name: MYSQL_ROOT_PASSWORD
+        value: root
       ports:
         - containerPort: 3306
